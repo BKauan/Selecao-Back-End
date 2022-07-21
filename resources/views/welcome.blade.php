@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="http://localhost/apicomentarios/public/posts/1">Novo Produto</a>
+                    <a href="http://localhost/selecao-back-end/public/posts/1">Novo Produto</a>
                 </div>
             </div>
         </div>

@@ -29,4 +29,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/posts', 'PostController@index')->name('post.index');
 Route::get('/posts/{post}', 'PostController@show')->name('post.show');
 
-Route::get('users/profile', 'UsersController@edit')->name('user.edit-profile');
+Route::get('users/profile', 'Api\UserController@edit')->name('user.edit-profile');
+Route::put('users/profile', 'Api\UserController@update')->name('user.update-profile');

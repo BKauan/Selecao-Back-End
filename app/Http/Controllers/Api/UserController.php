@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\User;
+use App\Http\Requests\Api\UpdateProfileRequest;
 
 class UserController extends Controller
 {
@@ -42,7 +43,7 @@ class UserController extends Controller
         return $user;
     }
 
-    public function update(Request $request, $id){
+/*     public function update(Request $request, $id){
 
         try{
 
@@ -59,5 +60,21 @@ class UserController extends Controller
         }   catch(Exception $erro){
             return ['retorno'=>'Erro', 'details'=>$erro];
         }
+    } */
+
+    public function edit(){
+        return view('users.edit')->with('user', auth()->user());
+    }
+
+    public function update(UpdateProfileRequest $request){
+        $user = auth()->user();
+
+        $user->update([
+            'name' => $request->name,
+        ]);
+
+        session()->flash('success', 'Profile updated successfully');
+
+        return redirect()->back();
     }
 }
