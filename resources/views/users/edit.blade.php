@@ -9,6 +9,18 @@
 
                 <div class="card-body">
 
+                    @if(session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
+
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            {{ implode('', $errors->all(':message')) }}
+                        </div>
+                    @endif
+
                     <form action="{{ route('user.update-profile') }}" method="post">
 
                         @csrf

@@ -73,8 +73,6 @@ class UserController extends Controller
             'name' => $request->name,
         ]);
 
-        session()->flash('success', 'Profile updated successfully');
-
-        return redirect()->back();
+        return redirect()->back()->with('message', 'User Update Successfully!');
     }
 }
