@@ -19,6 +19,10 @@ class CreatePostsTable extends Migration
             $table->text('body');
             $table->timestamps();
         });
+
+        $id = DB::table('posts')->insertGetId(
+            ['title' => 'Novo Produto', 'body' => 'Um novo produto das empresas Array Enterprise']
+        );
     }
 
     /**
