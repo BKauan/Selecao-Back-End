@@ -29,3 +29,9 @@ A empresa ArrayEnterprises solicitou o desenvolvimento de um sistema de comentá
 - O sistema deverá possuir um usuário administrador que pode excluir todos os comentários;
 - O sistema deverá criptografar a senha do usuário;
 - O sistema deverá permitir o usuário fazer o upload de uma foto de perfil e exibi-la nos comentários desse usuário.
+
+## Sobre a aplicação
+- O sistema inicia na tela padrão do Laravel que foi modificada para conter o titulo "ArrayEnterprises" e um href no "Novo Produto";
+- Ao clicar em "Novo Produto" você será redirecionado para uma página de "post" onde ficarão os comentários. Esse "post" é gerado junto com a criação da tabela "posts", servindo apenas de exemplo;
+- Os comentários só poderão ser feitos por um usuário que estiver logado;
+- No código existem algumas linhas comentadas e arquivos que não são utilizados, deixei eles a fim de mostrar um pouco do processo e das tentativas que fiz para criar a aplicação.
